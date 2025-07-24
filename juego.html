@@ -1,27 +1,28 @@
 <html ng-app="JuegoBingo">
 
 <head>
+
     <title>Juego</title>
     <link href="estilos/estilos.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="codigo/app.js"></script>
     <script src="codigo/cantor.js"></script>
-
 </head>
-
 <body ng-controller="ControladorJuegoBingo">
     <button class="boton" ng-click="iniciarJuego()">
         Iniciar juego
     </button>
+
     <button class="boton" ng-click="sacarBalota()">
         Sacar balota
     </button>
 
     <div class="ultimaBalota">
         Última Balota <span class="numeroBalota">
-            {{ cantor.ultimaBalota }}
+            {{ cantor.ultimaBalota || "Ninguno" }}
         </span>
     </div>
+
     <div class="cantor">
         <table class="tablaCantor">
             <thead>
