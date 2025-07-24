@@ -6,5 +6,9 @@ angular.module("JuegoBingo", [])
             $scope.iniciarJuego = function () {
 
             }
+
+            $scope.sacarBalota = function () {
+                $scope.cantor.sacarBalota();
+            }
         }
     );
